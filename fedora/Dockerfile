@@ -1,0 +1,17 @@
+FROM fedora
+ENV scripts /scripts
+#WORKDIR ${scripts}
+#ADD https://github.com/rlfigueiredo/docker $scripts
+#ADD . $scripts/test
+#COPY mounting-pi-nfs.sh $scripts
+RUN yum install wget openssl tcpdump bind-utils git nmap file net-tools file -y
+#RUN yum install wget -y \
+#&& yum install openssl -y \
+#&& yum install tcpdump -y \
+#&& yum install bind-utils -y \
+#&& yum install git -y \
+#&& yum install nmap -y \
+#&& yum install file -y \
+#&& yum install net-tools -y \
+#&& yum install file -y
+RUN git clone https://github.com/rlfigueiredo/docker.git $scripts/docker
