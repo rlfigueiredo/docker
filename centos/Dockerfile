@@ -10,4 +10,5 @@ yum install tcpdump -y && \
 yum install bind-utils -y \
 yum install git -y \
 yum install nmap -y \
-yum install file -y
+yum install file -y \
+yum install net-tools -y
